@@ -50,7 +50,7 @@
           }
         }
       ],
-      "_postman_id": "15173b8a-0e9f-4e08-872f-c7c591766a10",
+      "id": "15173b8a-0e9f-4e08-872f-c7c591766a10",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -70,10 +70,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"name\": \"Taylor Household\"\r\n}",
-          "options": {
-            "raw": {}
-          }
+          "raw": "{\r\n    \"name\": \"Taylor Household\"\r\n}"
         },
         "url": "http://{{host}}/households",
         "description": "This request will generate a new household in the Globomantics' Library API"
@@ -110,7 +107,24 @@
           "script": {
             "id": "ccd15c45-549e-464c-b785-0f45a3069410",
             "exec": [
-              "const users = data.users;\r",
+              "const users = [{\r",
+              "    email: \"email1\",\r",
+              "    firstName: \"myUser1\",\r",
+              "    lastName: \"fam1\"\r",
+              "}, {\r",
+              "    email: \"email2\",\r",
+              "    firstName: \"myUser2\",\r",
+              "    lastName: \"fam2\"\r",
+              "}, {\r",
+              "    email: \"email3\",\r",
+              "    firstName: \"myUser3\",\r",
+              "    lastName: \"fam3\"\r",
+              "}, {\r",
+              "    email: \"email4\",\r",
+              "    firstName: \"myUser4\",\r",
+              "    lastName: \"fam4\"\r",
+              "}];\r",
+              "\r",
               "const user = _.sample(users);\r",
               "\r",
               "pm.globals.set(\"email\", user.email);\r",
@@ -123,7 +137,7 @@
           }
         }
       ],
-      "_postman_id": "93d075a9-3bde-4dd6-89d3-42aac28323b7",
+      "id": "93d075a9-3bde-4dd6-89d3-42aac28323b7",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -143,10 +157,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"e-mail\": \"{{email}}\",\r\n    \"firstName\": \"{{firstName}}\",\r\n    \"lastName\": \"{{lastName}}\",\r\n    \"householdId\": {{householdId}}\r\n}",
-          "options": {
-            "raw": {}
-          }
+          "raw": "{\r\n    \"e-mail\": \"{{email}}\",\r\n    \"firstName\": \"{{firstName}}\",\r\n    \"lastName\": \"{{lastName}}\",\r\n    \"householdId\": {{householdId}}\r\n}"
         },
         "url": "http://{{host}}/users"
       },
@@ -166,7 +177,7 @@
           }
         }
       ],
-      "_postman_id": "513837bd-07b7-4fb2-acc6-c4cdd73dc76d",
+      "id": "513837bd-07b7-4fb2-acc6-c4cdd73dc76d",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -186,10 +197,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"email\": \"chip+taylor@gmail.com\",\r\n    \"firstName\": \"Chocolate Chip\",\r\n    \"lastName\": \"Taylor\",\r\n    \"householdId\": {{householdId}}\r\n}",
-          "options": {
-            "raw": {}
-          }
+          "raw": "{\r\n    \"email\": \"chip+taylor@gmail.com\",\r\n    \"firstName\": \"Chocolate Chip\",\r\n    \"lastName\": \"Taylor\",\r\n    \"householdId\": {{householdId}}\r\n}"
         },
         "url": "http://{{host}}/users"
       },
@@ -231,7 +239,7 @@
           }
         }
       ],
-      "_postman_id": "98b98221-6b3a-454a-80ac-a7a703c56106",
+      "id": "98b98221-6b3a-454a-80ac-a7a703c56106",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -255,7 +263,7 @@
     },
     {
       "name": "Add Book To Second User",
-      "_postman_id": "9d854f08-740f-4393-9728-08c3bbc026ad",
+      "id": "9d854f08-740f-4393-9728-08c3bbc026ad",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -302,7 +310,7 @@
           }
         }
       ],
-      "_postman_id": "659157be-59e6-4775-b924-9437e2bcdd48",
+      "id": "659157be-59e6-4775-b924-9437e2bcdd48",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
